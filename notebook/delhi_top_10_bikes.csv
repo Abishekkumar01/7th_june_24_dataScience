@@ -1,0 +1,11 @@
+price,city,kms_driven,owner,age,power,brand
+1800000.0,Delhi,2600.0,First Owner,4.0,1000.0,BMW
+1550000.0,Delhi,9800.0,Second Owner,6.0,1000.0,Yamaha
+1500000.0,Delhi,18000.0,First Owner,4.0,1000.0,BMW
+1490000.0,Delhi,12500.0,First Owner,5.0,1200.0,Ducati
+1350000.0,Delhi,4600.0,First Owner,3.0,850.0,BMW
+1149000.0,Delhi,9875.0,First Owner,6.0,1300.0,Suzuki
+1100000.0,Delhi,24000.0,First Owner,4.0,107.0,Harley-Davidson
+1070500.0,Delhi,289.0,First Owner,3.0,959.0,Ducati
+1000000.0,Delhi,1500.0,First Owner,4.0,1200.0,Triumph
+950000.0,Delhi,4600.0,First Owner,4.0,1200.0,Triumph
