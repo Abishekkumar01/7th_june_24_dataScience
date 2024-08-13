@@ -1,0 +1,248 @@
+<!-- <html>
+    <head>
+        <title>Insurance prediction</title>
+    </head>
+    <body>
+        <h2>Get insurance premium charges prediction</h2>
+        <hr> -->
+        <!-- age', 'sex', 'bmi', 'children', 'smoker', 'health_category',
+       'region_northeast', 'region_northwest', 'region_southeast',
+       'region_southwest -->
+        <!-- <form action="{{ url_for('predict') }}" method="post">   
+            <label for="">Region : </label>
+            <select name="region" id="">
+                <option value="se">southeasth</option>
+                <option value="sw">southwest</option>
+                <option value="ne">northeast</option>
+                <option value="nw">northwest</option>
+            </select><br><br>
+
+
+            <label for="">Children : </label>
+            <select name="children" id="">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select><br><br>
+
+            <label for="">Health : </label>
+            <select name="health" id="">
+                <option value="1">Underweight</option>
+                <option value="2">Healthyweight</option>
+                <option value="3">overweight</option>
+                <option value="4">obese</option>
+            </select><br><br>
+
+
+
+            <label for="">smoker : </label>
+            <select name="smoker" id="">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select><br><br>
+
+            <label for="">Gender : </label>
+            <select name="gender" id="">
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+            </select><br><br>
+
+
+            <label for="">BMI</label>
+            <input type="text" name="bmi" required><br><br>
+            
+            <label for="">Age</label>
+            <input type="text" placeholder="your age is plz ....." name="age" required>
+<br><br>
+            <button type="submit">Submit</button>
+
+        </form>
+
+    </body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Prediction</title>
+    <style>
+        body {
+            background-color: #2e2e2e;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            width: 100%;
+            max-width: 400px;
+        }
+        h2 {
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .input-group {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 0.5rem 0;
+            width: 100%;
+            max-width: 300px;
+            justify-content: space-between;
+        }
+        .input-group label {
+            flex: 1;
+            text-align: left;
+            color: #e2e8f0; /* Changed to a lighter color for better visibility */
+        }
+        .input-group input, .input-group select {
+            flex: 2;
+            padding: 0.5rem;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            background-color: rgba(17, 24, 39, 1);
+            color: rgba(243, 244, 246, 1);
+        }
+        .input-group input:focus, .input-group select:focus {
+            border-color: rgba(167, 139, 250);
+        }
+        button {
+            --color: #560bad;
+            font-family: inherit;
+            display: inline-block;
+            width: 8em;
+            height: 2.6em;
+            line-height: 2.5em;
+            margin: 1rem;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid var(--color);
+            transition: color .5s;
+            z-index: 1;
+            font-size: 17px;
+            border-radius: 6px;
+            font-weight: 500;
+            color: var(--color);
+            background: none;
+            cursor: pointer;
+        }
+        button:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            background: var(--color);
+            height: 150px;
+            width: 200px;
+            border-radius: 50%;
+            top: 100%;
+            left: 100%;
+            transition: all .7s;
+        }
+        button:hover {
+            color: #fff;
+        }
+        button:hover:before {
+            top: -30px;
+            left: -30px;
+        }
+        button:active:before {
+            background: #3a0ca3;
+            transition: background 0s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Get Insurance Premium Charges Prediction</h2>
+        <hr>
+        <form action="{{ url_for('predict') }}" method="post">
+            <div class="input-group">
+                <label for="region">Region:</label>
+                <select name="region" id="region">
+                    <option value="se">Southeast</option>
+                    <option value="sw">Southwest</option>
+                    <option value="ne">Northeast</option>
+                    <option value="nw">Northwest</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="children">Children:</label>
+                <select name="children" id="children">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="health">Health:</label>
+                <select name="health" id="health">
+                    <option value="1">Underweight</option>
+                    <option value="2">Healthy Weight</option>
+                    <option value="3">Overweight</option>
+                    <option value="4">Obese</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="smoker">Smoker:</label>
+                <select name="smoker" id="smoker">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="gender">Gender:</label>
+                <select name="gender" id="gender">
+                    <option value="0">Female</option>
+                    <option value="1">Male</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="bmi">BMI:</label>
+                <input type="text" name="bmi" id="bmi" required>
+            </div>
+
+            <div class="input-group">
+                <label for="age">Age:</label>
+                <input type="text" name="age" id="age" placeholder="Your age, please..." required>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+<!-- Get Insurance Premium Charges Prediction -->

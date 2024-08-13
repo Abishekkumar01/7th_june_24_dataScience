@@ -1,0 +1,103 @@
+<!-- <html>
+    <head>
+        <title>Your prediction</title>
+    </head>
+    <body style="background-color: rgb(243, 240, 237);">
+        <h2 style="text-align: center;  margin-top: 350px; color: rgb(68, 7, 188);">Your predicted price is: {{ output }}</h2>
+    </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Prediction</title>
+    <style>
+        body {
+            background-color: #2e2e2e;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        h2 {
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+        .output {
+            font-size: 2rem;
+            color: #ff6f61;
+        }
+        .button-container {
+            margin-top: 1rem;
+        }
+        .button {
+            --color: #560bad;
+            font-family: inherit;
+            display: inline-block;
+            width: 8em;
+            height: 2.6em;
+            line-height: 2.5em;
+            margin: 20px;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid var(--color);
+            transition: color .5s;
+            z-index: 1;
+            font-size: 17px;
+            border-radius: 6px;
+            font-weight: 500;
+            color: var(--color);
+            background: none;
+            cursor: pointer;
+        }
+        .button:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            background: var(--color);
+            height: 150px;
+            width: 200px;
+            border-radius: 50%;
+            top: 100%;
+            left: 100%;
+            transition: all .7s;
+        }
+        .button:hover {
+            color: #fff;
+        }
+        .button:hover:before {
+            top: -30px;
+            left: -30px;
+        }
+        .button:active:before {
+            background: #3a0ca3;
+            transition: background 0s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Your Predicted Price is:</h2>
+        <div class="output">{{ output }}</div>
+        <div class="button-container">
+            <a href="/" class="button">Go Back</a>
+        </div>
+    </div>
+</body>
+</html>
