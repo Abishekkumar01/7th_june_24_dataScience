@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Webpage</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Social Media Icons</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: conic-gradient(from 225deg, #A39B3D, #F7FECC);
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 10px 0;
+        }
+        .header .project-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .header .project-row img {
+            max-width: 50%;
+            height: auto;
+        }
+        .header .project-row .btn-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .header .project-row .btn-container a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #A39B3D;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .header .project-row .btn-container a:hover {
+            background-color: #F7FECC;
+        }
+        .details-row {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .details-row img {
+            max-width: 30%;
+            height: auto;
+        }
+        .contact {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+        }
+        .contact h2 {
+            margin-bottom: 20px;
+        }
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact form input, .contact form textarea {
+            width: 100%;
+            max-width: 500px;
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        .contact form button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff0000;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .contact form button:hover {
+            background-color: #cc0000;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 50px;
+        }
+
+        .social-icons a {
+            color: #000;
+            font-size: 40px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #007bb5; /* LinkedIn color */
+        }
+
+        .social-icons a.instagram:hover {
+            color: #E1306C; /* Instagram color */
+        }
+        .my-image {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Suitable crops prediction</h1>
+            <div class="project-row">
+                <img src=".\static\arushi.jpg" alt="Arushi Mathur" class="my-image" />
+                <div class="btn-container">
+                    <a href="/project">Go to Project</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="details-row">
+            <div>
+                <h1>Project Description</h1>
+                <p>
+                    Agriculture plays a crucial role in the economy and sustenance of societies. However, one of the significant challenges faced by farmers is determining the most suitable crops to cultivate based on various environmental and soil factors. The "Suitable Crops Prediction Using K-means Algorithm" project aims to address this challenge by leveraging machine learning to assist farmers in making informed decisions.</p>
+                    
+                    <h2>Objective</h2>
+                    <p>The primary objective of this project is to develop a predictive model that identifies the most suitable crops for a given region based on soil characteristics, climate conditions, and other relevant parameters. By using the K-means clustering algorithm, the project will group regions with similar agricultural conditions and recommend crops that are best suited for those clusters.
+                    </p>
+                    <h2>Methodology</h2>
+                    <p><h3>1.Data Collection:</h3> Gather data on soil properties, climate conditions, crop yield, and other relevant factors from various agricultural databases and local sources.
+                    
+                    <br><h3>2.Data Preprocessing:</h3> Clean and preprocess the data to ensure accuracy and consistency. This involves handling missing values, normalizing data, and selecting relevant features for the model.
+                    
+                    <br><h3>3.K-means Clustering:</h3> Apply the K-means algorithm to cluster the data into groups based on similar agricultural conditions. The algorithm will partition the data into k clusters, where each cluster represents regions with similar characteristics.
+                    
+                    <br><h3>4.Cluster Analysis:</h3> Analyze the clusters to identify patterns and relationships between the environmental factors and crop suitability. Each cluster will be examined to determine the crops that have historically performed well under similar conditions.
+                    
+                    <br><h3>5.Model Evaluation:</h3> Validate the model's predictions using historical crop yield data and expert knowledge. Adjust the clustering parameters and features as needed to improve accuracy.
+                    
+                    <br><h3>6.Recommendation System:</h3> Develop a user-friendly interface that allows farmers to input their region's characteristics and receive crop recommendations based on the K-means clustering results.
+                    </p>
+                    <h2>Expected Outcomes</h2>
+                    <p><h3>Enhanced Decision-Making:</h3> Farmers will receive data-driven recommendations on the most suitable crops to cultivate, leading to better yields and optimized resource use.
+                    <br><h3>Increased Productivity:</h3> By selecting the right crops for their regions, farmers can achieve higher productivity and profitability.
+                    <br><h3>Sustainable Agriculture:</h3> The project promotes sustainable agricultural practices by aligning crop choices with environmental conditions, reducing the risk of crop failure and resource wastage.
+                    <h2>Tools and Technologies</h2>
+                    <h3>Programming Language:</h3> Python
+                    <h3>Libraries:</h3> Scikit-learn, Pandas, NumPy, Matplotlib
+                    <h3>Data Sources:</h3> Agricultural databases, climate data repositories, local agricultural bodies
+                    <h3>Development Environment:</h3> Jupyter Notebook, PyCharm
+                    <h2>Conclusion</h2>
+                    <p>The "Suitable Crops Prediction Using K-means Algorithm" project leverages machine learning to empower farmers with actionable insights, promoting sustainable and profitable agriculture. By accurately predicting the most suitable crops for specific regions, the project aims to enhance agricultural productivity and contribute to the overall well-being of farming communities.
+                    
+                    </p>
+            </div>
+        </div>
+
+        <div class="details-row">
+            <img src=".\static\arushi.jpg" alt="Arushi Mathur" class="my-image" />
+            <div>
+                <h2>Arushi Mathur</h2>
+                <p>Hardworking and Enthusiastic College student working towards Bachelors of Technology in Computer Science. Seeking to use my knowledge of Data Science,Cybersecurity , Web Development(Front-end development). Dedicated, Hardworking and committed to become dependable and valuable to the company</p>
+            </div>
+        </div>
+        
+        <div class="social-icons">
+                <a href="https://www.instagram.com/_arushi_mathur5" target="_blank" class="instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/arushi-mathur-2983a5289" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+        </div>
+        
+    </div>
+    <footer class="footer bg-dark text-center py-4">
+        <div class="container">
+          <span class="text-muted">&copy; 2024 Your Name. All rights reserved.</span>
+        </div>
+      </footer>
+    
+      <!-- Bootstrap JS and jQuery (Optional, for dropdowns and toggles) -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

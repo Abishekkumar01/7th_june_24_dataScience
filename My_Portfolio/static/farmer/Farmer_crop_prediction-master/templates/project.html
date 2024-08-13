@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Prediction</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom right, #5D26C1, #a17fe0);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            width: 400px;
+        }
+        .form-container h2 {
+            text-align: center;
+            color: #f7f7f7;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #e0e0e0;
+            font-weight: 500;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+            transition: background-color 0.3s ease;
+        }
+        .form-group input:focus {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        .form-group button {
+            width: 100%;
+            padding: 12px;
+            background-color: #a17fe0;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .form-group button:hover {
+            background-color: #5D26C1;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Crop Prediction</h2>
+        <form action="{{ url_for('prediction') }}" method='post'>
+            <div class="form-group">
+                <label for="n">Nitrogen (N)</label>
+                <input type="number" id="n" name="n" required>
+            </div>
+            <div class="form-group">
+                <label for="p">Phosphorus (P)</label>
+                <input type="number" id="p" name="p" required>
+            </div>
+            <div class="form-group">
+                <label for="k">Potassium (K)</label>
+                <input type="number" id="k" name="k" required>
+            </div>
+            <div class="form-group">
+                <label for="temperature">Temperature (°C)</label>
+                <input type="number" step="0.1" id="temperature" name="temperature" required>
+            </div>
+            <div class="form-group">
+                <label for="humidity">Humidity (%)</label>
+                <input type="number" step="0.1" id="humidity" name="humidity" required>
+            </div>
+            <div class="form-group">
+                <label for="ph">pH Level</label>
+                <input type="number" step="0.1" id="ph" name="ph" required>
+            </div>
+            <div class="form-group">
+                <label for="rainfall">Rainfall (mm)</label>
+                <input type="number" step="0.1" id="rainfall" name="rainfall" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Predict Crop</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

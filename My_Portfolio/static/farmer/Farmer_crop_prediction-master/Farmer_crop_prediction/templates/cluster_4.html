@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Images</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url('static/agriculture-barn-countryside-1198507.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .crop-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1200px;
+        }
+        .crop-card {
+            margin: 10px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 1 0 30%; /* Ensures three items in the first row */
+            max-width: 30%;
+        }
+        .crop-card img {
+            width: 100%;
+            height: auto;
+        }
+        .crop-card-title {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 1.2em;
+        }
+        @media (max-width: 768px) {
+            .crop-card {
+                flex: 1 0 45%; /* Ensures two items in the first row */
+                max-width: 45%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="crop-container">
+        <div class="crop-card">
+            <img src=".\static\grapes.jpg" alt="Crop Image 2">
+            <div class="crop-card-title">GRAPES</div>
+        </div>
+        <div class="crop-card">
+            <img src=".\static\apple.jpg" alt="Crop Image 3">
+            <div class="crop-card-title">APPLE</div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

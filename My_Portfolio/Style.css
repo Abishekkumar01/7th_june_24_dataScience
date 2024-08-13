@@ -1,0 +1,604 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap'); */
+/* @import url("https://use.typekit.net/shn4otx.css");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #172346;
+    --snd-bg-color: #262840; 
+    --text-color: #fff;
+    --main-color: #3ea8ef;
+}
+
+html {
+    font-size: 62.5%; 
+    overflow-x: hidden; 
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+}
+
+.logo{
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 700;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: var(--text-color);
+}
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.home-contenth3:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+
+span{
+    color: var(--main-color);
+
+}
+
+.home-content h1{
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-img img {
+width: 25vw;
+animation: floatImage 4s ease-in-out infinite;
+} */
+
+
+
+@import url('https://use.typekit.net/shn4otx.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #000000;
+    --snd-bg-color: #262840;
+    --text-color: #fff;
+    --main-color: #3ea8ef;
+    --accent-color: #ff6347;
+    --font-family: 'Nunito', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    line-height: 1.6;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9%;
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 2rem;
+    color: var(--main-color);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.navbar a {
+    color: var(--text-color);
+    font-size: 1.6rem;
+    margin: 0 1.5rem;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+    cursor: pointer;
+}
+
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+
+.home-content {
+    max-width: 55%;
+}
+
+.home-content h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.home-content span {
+    color: var(--main-color);
+}
+
+.home-content h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+}
+
+.home-content p {
+    font-size: 1.6rem;
+    margin-bottom: -1rem;
+}
+
+.social-media a {
+    color: var(--text-color);
+    font-size: 2rem;
+    margin: 0 1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-media a:hover {
+    color: var(--main-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    background: var(--main-color);
+    color: var(--bg-color);
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: var(--accent-color);
+}
+
+.home-img {
+    max-width: 45%;
+    padding-right: 100px;
+}
+
+.home-img img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+
+@media screen and (max-width: 768px) {
+    .navbar a {
+        font-size: 1.4rem;
+    }
+
+    .home-content h3 {
+        font-size: 2.4rem;
+    }
+
+    .home-content h1 {
+        font-size: 4rem;
+    }
+
+    .home-content p {
+        font-size: 1.4rem;
+    }
+
+    .home-img img {
+        width: 80%;
+    }
+}
+
+.home-content p{
+    font-size: 1.6rem;
+}
+
+/* .social-media{
+    padding-bottom: 10px;
+
+} */
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--snd-bg-color);
+    box-shadow: 0 0 irem var(--main-color);
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px;
+}
+
+/* ================= */
+/* Black Background Blend */
+/* ================= */
+/* Dynamic Black Background Blend */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(7, 7, 25, 0.8), rgba(93, 81, 81, 0.6)); /* Gradient background */
+    border-radius: 15px; /* Slightly increased border radius for a softer look */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6); /* Enhanced shadow for more depth */
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.about:hover {
+    background: linear-gradient(135deg, rgba(37, 20, 53, 0.9), rgba(0, 0, 0, 0.7)); /* Darker gradient on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8); /* More pronounced shadow on hover */
+}
+
+.about-img img {
+    height: 500px; 
+    width: auto; 
+    border-radius: 15px; /* Match border radius */
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.about-img img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.abou-content {
+    flex: 1;
+    padding-left: 3rem; 
+}
+
+.heading {
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #fff; /* White text for visibility on dark background */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.heading:hover {
+    color: var(--main-color); /* Change color on hover */
+}
+
+.heading span {
+    color: var(--main-color); 
+}
+
+h3 {
+    font-size: 1.9rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: #fff; /* White text for visibility on dark background */
+}
+
+p {
+    font-size: 1.7rem;
+    line-height: 1.9;
+    color: #ddd; /* Slightly lighter text for better readability */
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.4rem;
+    color: #fff;
+    background: linear-gradient(135deg, var(--main-color), #3ea8ef); /* Gradient background */
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease; /* Smooth transitions for background and scale */
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #3ea8ef, var(--main-color)); /* Inverted gradient on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.abou-content h2{
+    padding-right: 1200;
+}
+
+/* Dont use it  */
+/* ================= */
+/* Black Background Blend */
+/* .about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.7); 
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); 
+}
+
+.about-img img {
+    height: 500px; 
+    width: auto; 
+    border-radius: 10px; 
+}
+
+.abou-content {
+    flex: 1;
+    padding-left: 2rem; 
+}
+
+.heading {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #fff; 
+}
+
+.heading span {
+    color: var(--main-color); 
+}
+
+h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: #fff; 
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: #ddd; 
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #3ea8ef; 
+} */
+
+
+/* project section  */
+/* General Styles for the Project Page */
+.projects {
+    padding: 5rem 2rem;
+    background: var(--snd-bg-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.heading {
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: #fff; /* White text for visibility on dark background */
+    text-align: center;
+}
+
+.heading span {
+    color: var(--main-color);
+}
+
+.project {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+    margin-bottom: 2rem;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+}
+
+.project h2 {
+    font-size: 2.4rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.project p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: #ddd; /* Slightly lighter text for better readability */
+    margin-bottom: 1rem;
+}
+
+/* Footer Styling */
+footer {
+    background: var(--bg-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* contact section */
+/* Base Styling */
+body {
+    background: var(--bg-color); /* Black background */
+    color: var(--text-color); /* White text color */
+    font-family: var(--font-family);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+section.contact {
+    min-height: 100vh;
+    padding: 10rem 9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--snd-bg-color); /* Darker background for the contact section */
+}
+
+.contact-container {
+    background: rgba(30, 30, 30, 0.9); /* Dark background with slight opacity */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Darker shadow for depth */
+    width: 100%;
+    max-width: 600px;
+}
+
+.heading {
+    text-align: center;
+    color: var(--text-color); /* White text color */
+    margin-bottom: 20px;
+    font-size: 2.4rem;
+}
+
+.heading span {
+    color: var(--main-color); /* Accent color */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-color); /* White text color */
+    font-size: 1.6rem;
+}
+
+input[type="text"], 
+input[type="email"], 
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444; /* Dark border */
+    border-radius: 5px;
+    background: #222; /* Dark background for input fields */
+    color: var(--text-color); /* White text color */
+    font-size: 1.6rem;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--main-color); /* Accent color */
+    color: var(--bg-color); /* Black text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--accent-color); /* Hover color */
+}
