@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Message Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, purple, pink);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="email"], input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: purple;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .form-group button:hover {
+            background-color: darkviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Email Classification Page</h2>
+        <form action="{{ url_for('prediction') }}" method = "post">
+            
+            <div class="form-group">
+                <label for="message">Email Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">check if email is spam or ham</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
